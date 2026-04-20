@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const images = [
-  "/banner1.jpg",
-  "/banner2.jpg",
-  "/banner3.jpg",
+  "/src/assets/img/banner1.jpg",
+  "/src/assets/img/banner2.jpg",
+  "/src/assets/img/banner3.jpg",
 ];
 
 const BannerCarousel = () => {
@@ -12,7 +12,7 @@ const BannerCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // 3 sec change
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, []);

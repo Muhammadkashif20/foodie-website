@@ -8,11 +8,13 @@ import Testimonials from './Testimonials'
 import WhyChoose from './WhyChoose'
 import Header from '../../Components/Header'
 import Footer from '../../Components/Footer'
+import BannerCarousel from './BannerCarousel'
 
 const Home = () => {
 return (
     <>
     <Header/>
+    <BannerCarousel/>
     <Hero/>
     <Categories/>
     <Popular/>
