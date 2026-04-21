@@ -10,15 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.2.3",
     "@untitledui/icons": "^0.0.22",
+    "antd": "^6.3.6",
     "embla-carousel-react": "^8.6.0",
     "flowbite-react": "^0.12.17",
     "react": "^19.2.5",
+    "react-aria-components": "^1.17.0",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.1",
     "tailwind-merge": "^3.5.0",
-    "tailwindcss": "^4.2.2",
+    "tailwindcss": "^4.2.3",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-react-aria-components": "^2.1.0",
     "untitledui": "^0.1.61"
   },
   "devDependencies": {
