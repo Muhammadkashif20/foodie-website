@@ -1,54 +1,40 @@
-import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "@untitledui/icons";
+import { Carousel } from "../../Components/application/carousel/carousel-base";
 
-const images = [
-  "/src/assets/img/banner1.jpg",
-  "/src/assets/img/banner2.jpg",
-  "/src/assets/img/banner3.jpg",
-];
+ const BannerCarousel = () => {
+    return (
+        <Carousel.Root className="relative aspect-[1.6] max-w-160">
+            <Carousel.PrevTrigger className="absolute top-1/2 left-5 z-10 flex size-11 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-alpha-white/90 p-2 text-fg-secondary outline-focus-ring backdrop-blur-xs focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                <ChevronLeft className="size-6" />
+            </Carousel.PrevTrigger>
+            <Carousel.NextTrigger className="absolute top-1/2 right-5 z-10 flex size-11 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-alpha-white/90 p-2 text-fg-secondary outline-focus-ring backdrop-blur-xs focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                <ChevronRight className="size-6" />
+            </Carousel.NextTrigger>
 
-const BannerCarousel = () => {
-  const [index, setIndex] = useState(0);
+            <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2">
+                <CarouselIndicator framed size="lg" />
+            </div>
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 3000); 
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="w-full h-[400px] md:h-[500px] overflow-hidden relative">
-
-      {/* Image */}
-      <img
-        src={images[index]}
-        alt="banner"
-        className="w-full h-full object-cover transition-all duration-700"
-      />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 flex items-center px-6 md:px-16">
-
-        <div>
-          <h1 className="text-3xl md:text-5xl font-bold text-white">
-            Hot Deals 🔥<br />
-            <span className="text-orange-400">Up to 50% OFF</span>
-          </h1>
-
-          <p className="text-gray-200 mt-3 max-w-md">
-            Order your favorite meals now and enjoy fast delivery.
-          </p>
-
-          <button className="mt-5 bg-orange-500 px-6 py-3 rounded-lg hover:bg-orange-600">
-            Order Now
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-  );
+            <Carousel.Content className="gap-2">
+                <Carousel.Item className="overflow-hidden rounded-xl">
+                    <img alt="Image by Unsplash" src="/src/assets/img/banner1.jpg" className="size-full object-cover" />
+                </Carousel.Item>
+                <Carousel.Item className="overflow-hidden rounded-xl">
+                    <img
+                        alt="Image by Unsplash"
+                        src="/src/assets/img/banner2.jpg"
+                        className="size-full object-cover"
+                    />
+                </Carousel.Item>
+                <Carousel.Item className="overflow-hidden rounded-xl">
+                    <img
+                        alt="Image by Unsplash"
+                        src="src/assets/img/banner3.jpg"
+                        className="size-full object-cover"
+                    />
+                </Carousel.Item>
+            </Carousel.Content>
+        </Carousel.Root>
+    );
 };
-
 export default BannerCarousel;

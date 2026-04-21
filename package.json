@@ -11,11 +11,15 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
+    "@untitledui/icons": "^0.0.22",
+    "embla-carousel-react": "^8.6.0",
     "flowbite-react": "^0.12.17",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.1",
-    "tailwindcss": "^4.2.2"
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.2",
+    "untitledui": "^0.1.61"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
