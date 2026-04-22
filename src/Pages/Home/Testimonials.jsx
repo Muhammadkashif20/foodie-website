@@ -16,7 +16,7 @@ const Testimonials = () => {
       role: "Food Lover",
     },
     {
-      name: "Usman Ali",
+      name: "Muhammad Kashif",
       text: "UI is clean and ordering is super easy. Really impressed with service speed.",
       rating: 4,
       role: "New User",
