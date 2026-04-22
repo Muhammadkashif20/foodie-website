@@ -3,13 +3,13 @@ import foodDelivery from "../../assets/images/foodDeliverysm_logo.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative bg-[#0B0B0E] text-white min-h-screen flex items-start pt-24 pb-24 overflow-hidden ">
+    <section className="relative bg-[#0B0B0E] px-12 text-white min-h-screen flex items-start pt-24 pb-24 overflow-hidden ">
 
       {/* 🔥 Background Glow */}
       <div className="absolute top-[-150px] left-[-150px] w-[400px] h-[400px] bg-orange-500/20 blur-[120px]"></div>
       <div className="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-red-500/20 blur-[120px]"></div>
 
-      <div className="relative max-w-7xl mx-auto w-full px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto w-full  grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT SIDE */}
         <div className="pt-10 md:pt-0">
