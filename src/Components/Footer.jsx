@@ -14,19 +14,6 @@ import { GiKnifeFork } from "react-icons/gi";
 const Footer = () => {
   return (
     <>
-      <style>
-        {`
-          @keyframes logoFloat{
-            0%,100%{
-              transform:translateY(0px) rotate(0deg);
-            }
-
-            50%{
-              transform:translateY(-4px) rotate(6deg);
-            }
-          }
-        `}
-      </style>
 
       <footer className="bg-[#0B0B0E] text-gray-400 border-t border-white/5">
 
@@ -38,12 +25,8 @@ const Footer = () => {
 
             <div className="flex items-center gap-3">
 
-              {/* Animated Brand Icon */}
               <div
-                style={{
-                  animation:"logoFloat 5s ease-in-out infinite"
-                }}
-                className="w-11 h-11 rounded-full bg-[#151519] border border-white/10 flex items-center justify-center shadow-lg shadow-orange-500/10"
+                className="w-11 h-11 rounded-full bg-[#151519] border border-white/10 flex items-center justify-center"
               >
                 <GiKnifeFork className="text-orange-400 text-xl"/>
               </div>
