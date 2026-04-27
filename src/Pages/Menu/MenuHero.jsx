@@ -1,141 +1,83 @@
 import React from "react";
-import { FaSearch, FaStar } from "react-icons/fa";
+import { FaSearch, FaFire, FaClock, FaShieldAlt } from "react-icons/fa";
 
 const MenuHero = () => {
   return (
-    <section className="bg-[#0B0B0E] text-white pt-36 pb-24 px-6 md:px-12 overflow-hidden relative">
+    <section className="bg-[#0B0B0E] text-white pt-32 pb-12 px-6 md:px-12 relative overflow-hidden">
 
       {/* Glow */}
-      <div className="absolute top-[-120px] left-[-100px] w-[300px] h-[300px] bg-orange-500/20 blur-[120px]" />
-      <div className="absolute bottom-[-100px] right-[-100px] w-[280px] h-[280px] bg-red-500/20 blur-[120px]" />
+      <div className="absolute top-[-120px] left-[-100px] w-[280px] h-[280px] bg-orange-500/20 blur-[120px]" />
+      <div className="absolute right-[-100px] bottom-[-100px] w-[250px] h-[250px] bg-red-500/20 blur-[120px]" />
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative">
+      <div className="max-w-5xl mx-auto text-center relative">
 
-        {/* Left */}
-        <div>
-
-          <span className="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm mb-6">
-            🍽 Curated Menu Collection
-          </span>
-
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Explore Our
-            <br />
-            <span className="text-orange-400">
-              Signature Menu
-            </span>
-          </h1>
-
-          <p className="text-gray-400 mt-6 max-w-xl leading-relaxed text-lg">
-            Discover handcrafted meals, chef specials and trending dishes
-            prepared fresh every day.
-          </p>
-
-
-          {/* Search */}
-          <div className="mt-10 flex bg-[#151519] border border-white/10 rounded-2xl overflow-hidden max-w-xl">
-
-            <div className="px-5 flex items-center text-gray-500">
-              <FaSearch/>
-            </div>
-
-            <input
-              type="text"
-              placeholder="Search burgers, pizza, drinks..."
-              className="bg-transparent w-full py-4 outline-none text-sm"
-            />
-
-            <button className="bg-orange-500 px-7 hover:bg-orange-600 transition font-medium">
-              Search
-            </button>
-
-          </div>
-
-
-          {/* Tags */}
-          <div className="flex flex-wrap gap-3 mt-8">
-
-            <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              Pizza
-            </span>
-
-            <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              Burgers
-            </span>
-
-            <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              BBQ
-            </span>
-
-            <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              Desserts
-            </span>
-
-          </div>
-
+        {/* Live strip (REALISTIC TOUCH) */}
+        <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs mb-6">
+          <FaFire className="text-orange-400 animate-pulse" />
+          Live: New items added today
         </div>
 
+        {/* Heading */}
+        <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+          Discover Your <br />
+          <span className="text-orange-400">Favorite Food</span>
+        </h1>
 
-        {/* Right Feature Card */}
-        <div className="relative flex justify-center">
+        {/* Subtext */}
+        <p className="text-gray-400 mt-5 max-w-xl mx-auto">
+          Search dishes and explore categories built for your taste.
+        </p>
 
-          <div className="w-full max-w-md bg-[#151519] border border-white/10 rounded-3xl p-6 shadow-2xl">
+        {/* SEARCH */}
+        <div className="mt-10 flex bg-[#151519] border border-white/10 rounded-2xl overflow-hidden max-w-2xl mx-auto">
 
-            <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src="/food.png"
-                alt="featured food"
-                className="w-full h-[320px] object-cover"
-              />
-
-              <div className="absolute top-5 left-5 bg-orange-500 px-4 py-2 rounded-full text-xs font-medium">
-                30% OFF Today
-              </div>
-            </div>
-
-
-            <div className="mt-6 flex justify-between items-center">
-
-              <div>
-                <h3 className="text-2xl font-semibold">
-                  Premium Burger
-                </h3>
-
-                <p className="text-gray-400 text-sm mt-2">
-                  Fresh • Grilled • Signature
-                </p>
-              </div>
-
-              <div className="text-right">
-                <p className="text-orange-400 font-bold text-xl">
-                  Rs 850
-                </p>
-
-                <p className="text-sm flex items-center gap-1 mt-1">
-                  <FaStar className="text-yellow-400"/>
-                  4.9
-                </p>
-              </div>
-
-            </div>
-
+          <div className="px-5 flex items-center text-gray-500">
+            <FaSearch />
           </div>
 
+          <input
+            type="text"
+            placeholder="Search pizza, burgers, drinks..."
+            className="bg-transparent w-full py-4 outline-none text-sm"
+          />
 
-          {/* Floating mini card */}
-          <div className="absolute -bottom-6 -left-6 bg-black border border-white/10 rounded-2xl px-5 py-4 shadow-xl">
-            <p className="text-xs text-gray-400">
-              Most Ordered Today
-            </p>
-            <h4 className="font-semibold mt-1">
-              1.2k Orders
-            </h4>
+          <button className="bg-orange-500 px-6 hover:bg-orange-600 transition">
+            Search
+          </button>
+        </div>
+
+        {/* Category chips */}
+        <div className="flex gap-3 mt-8 justify-center flex-wrap">
+          {["All", "Pizza", "Burgers", "BBQ", "Desserts"].map((item, i) => (
+            <button
+              key={i}
+              className="px-5 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition"
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+
+        {/* TRUST STRIP (REAL FEEL ADDITION) */}
+        <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-gray-400">
+
+          <div className="flex items-center gap-2">
+            <FaClock className="text-orange-400" />
+            Fresh Updated Menu
+          </div>
+
+          <div className="flex items-center gap-2">
+            <FaShieldAlt className="text-orange-400" />
+            Safe & Verified Items
+          </div>
+
+          <div className="flex items-center gap-2">
+            ⭐ 4.8 User Rating
           </div>
 
         </div>
 
       </div>
-
     </section>
   );
 };
