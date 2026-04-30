@@ -1,5 +1,6 @@
 import React from "react";
-
+import Image1 from "../../assets/images/R1.jpg";
+import Image2 from "../../assets/images/R2.jpg";
 const AboutHero = () => {
   return (
     <section className="relative text-white pt-32 pb-24 px-6 md:px-12 overflow-hidden">
@@ -7,7 +8,7 @@ const AboutHero = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1528605248644-14dd04022da1"
+          src={Image1}
           alt="restaurant team"
           className="w-full h-full object-cover scale-110"
         />
@@ -27,7 +28,7 @@ const AboutHero = () => {
         <div>
 
           <p className="text-orange-400 text-xs tracking-[0.3em] uppercase">
-            Since 2015 • Our Story
+            Since 2020 • Our Story
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-5">
@@ -71,7 +72,7 @@ const AboutHero = () => {
 
           {/* Main image */}
           <img
-            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d"
+            src={Image2}
             alt="chef cooking"
             className="rounded-3xl shadow-2xl object-cover w-full h-[430px] transform hover:scale-[1.02] transition duration-500"
           />
