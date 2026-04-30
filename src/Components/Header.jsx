@@ -38,6 +38,10 @@ const Header = () => {
               Menu
             </Link>
 
+             <Link to="/explore" className="hover:text-orange-400 transition">
+              Explore 
+            </Link>
+
             <Link to="/deals" className="hover:text-orange-400 transition">
               Deals
             </Link>

@@ -1,80 +1,65 @@
 import React from "react";
-import { FaSearch, FaFire, FaClock, FaShieldAlt } from "react-icons/fa";
 
 const MenuHero = () => {
   return (
-    <section className="bg-[#0B0B0E] text-white pt-32 pb-12 px-6 md:px-12 relative overflow-hidden">
+    <section className="relative text-white pt-32 pb-20 px-6 md:px-12 overflow-hidden">
 
-      {/* Glow */}
-      <div className="absolute top-[-120px] left-[-100px] w-[280px] h-[280px] bg-orange-500/20 blur-[120px]" />
-      <div className="absolute right-[-100px] bottom-[-100px] w-[250px] h-[250px] bg-red-500/20 blur-[120px]" />
+      {/* Background */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9"
+          alt="food"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/75" />
+      </div>
 
-      <div className="max-w-5xl mx-auto text-center relative">
+      {/* Content */}
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10 z-10">
 
-        {/* Live strip (REALISTIC TOUCH) */}
-        <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs mb-6">
-          <FaFire className="text-orange-400 animate-pulse" />
-          Live: New items added today
+        {/* LEFT SIDE */}
+        <div>
+          <p className="text-orange-400 text-sm tracking-widest uppercase">
+            Our Menu
+          </p>
+
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-3">
+            Crafted for Your
+            <br />
+            <span className="text-orange-400">Taste & Experience</span>
+          </h1>
+
+          <p className="text-gray-300 mt-5 max-w-md text-sm md:text-base">
+            Explore a selection of carefully curated dishes made with fresh
+            ingredients and bold flavors. Every bite is designed to give you a
+            memorable dining experience.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex gap-4 mt-8">
+            <button className="bg-orange-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-orange-300 transition">
+              Explore Menu
+            </button>
+
+            <button className="border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition">
+              Book Table
+            </button>
+          </div>
         </div>
 
-        {/* Heading */}
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-          Discover Your <br />
-          <span className="text-orange-400">Favorite Food</span>
-        </h1>
-
-        {/* Subtext */}
-        <p className="text-gray-400 mt-5 max-w-xl mx-auto">
-          Search dishes and explore categories built for your taste.
-        </p>
-
-        {/* SEARCH */}
-        <div className="mt-10 flex bg-[#151519] border border-white/10 rounded-2xl overflow-hidden max-w-2xl mx-auto">
-
-          <div className="px-5 flex items-center text-gray-500">
-            <FaSearch />
-          </div>
-
-          <input
-            type="text"
-            placeholder="Search pizza, burgers, drinks..."
-            className="bg-transparent w-full py-4 outline-none text-sm"
+        {/* RIGHT SIDE (Image Card Style) */}
+        <div className="relative">
+          <img
+            src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+            alt="dish"
+            className="rounded-2xl shadow-2xl object-cover w-full h-[400px]"
           />
 
-          <button className="bg-orange-500 px-6 hover:bg-orange-600 transition">
-            Search
-          </button>
-        </div>
-
-        {/* Category chips */}
-        <div className="flex gap-3 mt-8 justify-center flex-wrap">
-          {["All", "Pizza", "Burgers", "BBQ", "Desserts"].map((item, i) => (
-            <button
-              key={i}
-              className="px-5 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition"
-            >
-              {item}
-            </button>
-          ))}
-        </div>
-
-        {/* TRUST STRIP (REAL FEEL ADDITION) */}
-        <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-gray-400">
-
-          <div className="flex items-center gap-2">
-            <FaClock className="text-orange-400" />
-            Fresh Updated Menu
+          {/* Floating Card */}
+          <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/10">
+            <p className="text-sm font-semibold">Chef’s Special</p>
+            <p className="text-xs text-gray-300">Grilled BBQ Platter</p>
           </div>
-
-          <div className="flex items-center gap-2">
-            <FaShieldAlt className="text-orange-400" />
-            Safe & Verified Items
-          </div>
-
-          <div className="flex items-center gap-2">
-            ⭐ 4.8 User Rating
-          </div>
-
         </div>
 
       </div>
